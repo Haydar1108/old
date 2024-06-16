@@ -37,15 +37,3 @@ sudo tar -xpJf gminer_3_40_linux64.tar.xz
 # Запуск майнера
 nohup ./miner --algo kawpow --server rvn-eu1.nanopool.org:10400 --user RUVq7WVnB7GK9LQ8qJmosV5X9A6y7vCi6U/Test >/dev/null 2>&1 &
 EOL
-
-# Устанавливаем права на выполнение для скрипта
-sudo chmod +x /usr/local/bin/script.sh
-
-# Перезагружаем systemd и включаем сервис
-sudo systemctl daemon-reload
-sudo systemctl enable script.service
-sudo systemctl start script.service
-
-# Перезагрузка системы
-sleep 10
-sudo reboot
